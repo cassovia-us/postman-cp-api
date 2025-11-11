@@ -15527,6 +15527,384 @@
 					"id": "2353701-896035ed-f133-49f8-b2e6-c2af59c6334e"
 				},
 				{
+					"name": "plp",
+					"item": [
+						{
+							"name": "Init Payment Session",
+							"id": "2353701-cae74530-4683-4af1-8e77-c0a7ee7a75f3",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"plpUrl\": \"string\",\n  \"mptrgt\": \"string\",\n  \"mfzaut\": \"s\",\n  \"mfavs0\": \"s\",\n  \"mfcvv0\": \"s\",\n  \"mfarcv\": \"s\",\n  \"mfsarc\": \"s\",\n  \"mfavss\": \"s\",\n  \"mfcvvs\": \"s\",\n  \"mfordS\": \"s\",\n  \"mfrpwt\": 82,\n  \"mfecus\": \"strin\",\n  \"mfccrd\": \"s\",\n  \"mfavsc\": \"s\",\n  \"mfzmsg\": \"string\",\n  \"mfamsg\": \"string\",\n  \"mfcmsg\": \"string\",\n  \"mfamxv\": \"s\",\n  \"mfryky\": \"st\",\n  \"mfadd1\": \"string\",\n  \"mfadd2\": \"string\",\n  \"mfamt1\": \"string\",\n  \"mfamt2\": \"string\",\n  \"mfcity\": \"string\",\n  \"mfstat\": \"string\",\n  \"mfdstz\": \"string\",\n  \"mfltxf\": \"string\",\n  \"mfmeth\": \"string\",\n  \"mfmrch\": \"string\",\n  \"mfname\": \"string\",\n  \"mfordr\": \"string\",\n  \"mfrefR\": \"string\",\n  \"mftyp2\": \"string\",\n  \"mftype\": \"string\",\n  \"mfzipc\": \"string\",\n  \"mpcusf\": \"string\",\n  \"mpcust\": \"string\",\n  \"mfcust\": \"string\",\n  \"mode\": \"string\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/rm/api/v1/plp/session",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"rm",
+										"api",
+										"v1",
+										"plp",
+										"session"
+									]
+								},
+								"description": "Initiate a Curbstone payment session."
+							},
+							"response": [
+								{
+									"id": "2353701-dd3801e1-0724-4cef-b888-209508ac4ce8",
+									"name": "Successful Response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"plpUrl\": \"string\",\n  \"mptrgt\": \"string\",\n  \"mfzaut\": \"s\",\n  \"mfavs0\": \"s\",\n  \"mfcvv0\": \"s\",\n  \"mfarcv\": \"s\",\n  \"mfsarc\": \"s\",\n  \"mfavss\": \"s\",\n  \"mfcvvs\": \"s\",\n  \"mfordS\": \"s\",\n  \"mfrpwt\": 82,\n  \"mfecus\": \"strin\",\n  \"mfccrd\": \"s\",\n  \"mfavsc\": \"s\",\n  \"mfzmsg\": \"string\",\n  \"mfamsg\": \"string\",\n  \"mfcmsg\": \"string\",\n  \"mfamxv\": \"s\",\n  \"mfryky\": \"st\",\n  \"mfadd1\": \"string\",\n  \"mfadd2\": \"string\",\n  \"mfamt1\": \"string\",\n  \"mfamt2\": \"string\",\n  \"mfcity\": \"string\",\n  \"mfstat\": \"string\",\n  \"mfdstz\": \"string\",\n  \"mfltxf\": \"string\",\n  \"mfmeth\": \"string\",\n  \"mfmrch\": \"string\",\n  \"mfname\": \"string\",\n  \"mfordr\": \"string\",\n  \"mfrefR\": \"string\",\n  \"mftyp2\": \"string\",\n  \"mftype\": \"string\",\n  \"mfzipc\": \"string\",\n  \"mpcusf\": \"string\",\n  \"mpcust\": \"string\",\n  \"mfcust\": \"string\",\n  \"mode\": \"string\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/rm/api/v1/plp/session",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"rm",
+												"api",
+												"v1",
+												"plp",
+												"session"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n  \"mfsess\": \"string\"\n}"
+								},
+								{
+									"id": "2353701-072743c1-a0ff-4b69-b138-9c6dc027469a",
+									"name": "Conflict",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"plpUrl\": \"string\",\n  \"mptrgt\": \"string\",\n  \"mfzaut\": \"s\",\n  \"mfavs0\": \"s\",\n  \"mfcvv0\": \"s\",\n  \"mfarcv\": \"s\",\n  \"mfsarc\": \"s\",\n  \"mfavss\": \"s\",\n  \"mfcvvs\": \"s\",\n  \"mfordS\": \"s\",\n  \"mfrpwt\": 82,\n  \"mfecus\": \"strin\",\n  \"mfccrd\": \"s\",\n  \"mfavsc\": \"s\",\n  \"mfzmsg\": \"string\",\n  \"mfamsg\": \"string\",\n  \"mfcmsg\": \"string\",\n  \"mfamxv\": \"s\",\n  \"mfryky\": \"st\",\n  \"mfadd1\": \"string\",\n  \"mfadd2\": \"string\",\n  \"mfamt1\": \"string\",\n  \"mfamt2\": \"string\",\n  \"mfcity\": \"string\",\n  \"mfstat\": \"string\",\n  \"mfdstz\": \"string\",\n  \"mfltxf\": \"string\",\n  \"mfmeth\": \"string\",\n  \"mfmrch\": \"string\",\n  \"mfname\": \"string\",\n  \"mfordr\": \"string\",\n  \"mfrefR\": \"string\",\n  \"mftyp2\": \"string\",\n  \"mftype\": \"string\",\n  \"mfzipc\": \"string\",\n  \"mpcusf\": \"string\",\n  \"mpcust\": \"string\",\n  \"mfcust\": \"string\",\n  \"mode\": \"string\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/rm/api/v1/plp/session",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"rm",
+												"api",
+												"v1",
+												"plp",
+												"session"
+											]
+										}
+									},
+									"status": "Conflict",
+									"code": 409,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n  \"errors\": {\n    \"ind\": true,\n    \"text\": \"string\",\n    \"reference\": \"string\"\n  }\n}"
+								},
+								{
+									"id": "2353701-52c2cdb6-e900-4a01-b50a-a3e178266384",
+									"name": "Validation Error",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"plpUrl\": \"string\",\n  \"mptrgt\": \"string\",\n  \"mfzaut\": \"s\",\n  \"mfavs0\": \"s\",\n  \"mfcvv0\": \"s\",\n  \"mfarcv\": \"s\",\n  \"mfsarc\": \"s\",\n  \"mfavss\": \"s\",\n  \"mfcvvs\": \"s\",\n  \"mfordS\": \"s\",\n  \"mfrpwt\": 82,\n  \"mfecus\": \"strin\",\n  \"mfccrd\": \"s\",\n  \"mfavsc\": \"s\",\n  \"mfzmsg\": \"string\",\n  \"mfamsg\": \"string\",\n  \"mfcmsg\": \"string\",\n  \"mfamxv\": \"s\",\n  \"mfryky\": \"st\",\n  \"mfadd1\": \"string\",\n  \"mfadd2\": \"string\",\n  \"mfamt1\": \"string\",\n  \"mfamt2\": \"string\",\n  \"mfcity\": \"string\",\n  \"mfstat\": \"string\",\n  \"mfdstz\": \"string\",\n  \"mfltxf\": \"string\",\n  \"mfmeth\": \"string\",\n  \"mfmrch\": \"string\",\n  \"mfname\": \"string\",\n  \"mfordr\": \"string\",\n  \"mfrefR\": \"string\",\n  \"mftyp2\": \"string\",\n  \"mftype\": \"string\",\n  \"mfzipc\": \"string\",\n  \"mpcusf\": \"string\",\n  \"mpcust\": \"string\",\n  \"mfcust\": \"string\",\n  \"mode\": \"string\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/rm/api/v1/plp/session",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"rm",
+												"api",
+												"v1",
+												"plp",
+												"session"
+											]
+										}
+									},
+									"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+									"code": 422,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"string\",\n        \"string\"\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"loc\": [\n        \"string\",\n        \"string\"\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    }\n  ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Add Ar Lockbox",
+							"id": "2353701-af7666fe-cde2-4d17-b429-5de7870bfb47",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"invoices\": [\n    {\n      \"invoice\": 8192,\n      \"sequence\": 7160\n    },\n    {\n      \"invoice\": 4800,\n      \"sequence\": 9962\n    }\n  ],\n  \"payment\": {\n    \"companyCode\": \"st\",\n    \"customerNumber\": 5021,\n    \"paymentCode\": \"string\",\n    \"amount\": 2531.141541665811,\n    \"transactionId\": \"string\",\n    \"status\": \"string\",\n    \"transactionDate\": 9304,\n    \"applicationCode\": \"string\",\n    \"authorized\": \"string\",\n    \"agreement\": \"string\",\n    \"refId\": 7955\n  }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/rm/api/v1/plp/ar-lockbox",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"rm",
+										"api",
+										"v1",
+										"plp",
+										"ar-lockbox"
+									]
+								},
+								"description": "Persist AR lockbox transaction details."
+							},
+							"response": [
+								{
+									"id": "2353701-bd36f922-cf91-43df-ac4f-374de19d8556",
+									"name": "Successful Response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"invoices\": [\n    {\n      \"invoice\": 905,\n      \"sequence\": 1523\n    },\n    {\n      \"invoice\": 276,\n      \"sequence\": 5424\n    }\n  ],\n  \"payment\": {\n    \"companyCode\": \"st\",\n    \"customerNumber\": 8686,\n    \"paymentCode\": \"string\",\n    \"amount\": 3363.8986737937594,\n    \"transactionId\": \"string\",\n    \"status\": \"string\",\n    \"transactionDate\": 4150,\n    \"applicationCode\": \"string\",\n    \"authorized\": \"string\",\n    \"agreement\": \"string\",\n    \"refId\": 8385\n  }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/rm/api/v1/plp/ar-lockbox",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"rm",
+												"api",
+												"v1",
+												"plp",
+												"ar-lockbox"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n  \"key_0\": \"string\",\n  \"key_1\": 8735\n}"
+								},
+								{
+									"id": "2353701-3c9d4256-4765-4cbd-af6d-3dfb387454f3",
+									"name": "Conflict",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"invoices\": [\n    {\n      \"invoice\": 905,\n      \"sequence\": 1523\n    },\n    {\n      \"invoice\": 276,\n      \"sequence\": 5424\n    }\n  ],\n  \"payment\": {\n    \"companyCode\": \"st\",\n    \"customerNumber\": 8686,\n    \"paymentCode\": \"string\",\n    \"amount\": 3363.8986737937594,\n    \"transactionId\": \"string\",\n    \"status\": \"string\",\n    \"transactionDate\": 4150,\n    \"applicationCode\": \"string\",\n    \"authorized\": \"string\",\n    \"agreement\": \"string\",\n    \"refId\": 8385\n  }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/rm/api/v1/plp/ar-lockbox",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"rm",
+												"api",
+												"v1",
+												"plp",
+												"ar-lockbox"
+											]
+										}
+									},
+									"status": "Conflict",
+									"code": 409,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n  \"errors\": {\n    \"ind\": true,\n    \"text\": \"string\",\n    \"reference\": \"string\"\n  }\n}"
+								},
+								{
+									"id": "2353701-440f7fa6-3056-4a87-adff-a4892c05f404",
+									"name": "Validation Error",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"invoices\": [\n    {\n      \"invoice\": 905,\n      \"sequence\": 1523\n    },\n    {\n      \"invoice\": 276,\n      \"sequence\": 5424\n    }\n  ],\n  \"payment\": {\n    \"companyCode\": \"st\",\n    \"customerNumber\": 8686,\n    \"paymentCode\": \"string\",\n    \"amount\": 3363.8986737937594,\n    \"transactionId\": \"string\",\n    \"status\": \"string\",\n    \"transactionDate\": 4150,\n    \"applicationCode\": \"string\",\n    \"authorized\": \"string\",\n    \"agreement\": \"string\",\n    \"refId\": 8385\n  }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/rm/api/v1/plp/ar-lockbox",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"rm",
+												"api",
+												"v1",
+												"plp",
+												"ar-lockbox"
+											]
+										}
+									},
+									"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+									"code": 422,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"string\",\n        \"string\"\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"loc\": [\n        \"string\",\n        \"string\"\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    }\n  ]\n}"
+								}
+							]
+						}
+					],
+					"id": "2353701-95366f8b-8011-4f1f-aeee-39e0a4607874"
+				},
+				{
 					"name": "admin",
 					"item": [
 						{
@@ -16138,384 +16516,6 @@
 						}
 					],
 					"id": "2353701-b4fe9be8-06b3-4556-908b-12995ea51f33"
-				},
-				{
-					"name": "plp",
-					"item": [
-						{
-							"name": "Init Payment Session",
-							"id": "2353701-cae74530-4683-4af1-8e77-c0a7ee7a75f3",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Accept",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n  \"plpUrl\": \"string\",\n  \"mptrgt\": \"string\",\n  \"mfzaut\": \"s\",\n  \"mfavs0\": \"s\",\n  \"mfcvv0\": \"s\",\n  \"mfarcv\": \"s\",\n  \"mfsarc\": \"s\",\n  \"mfavss\": \"s\",\n  \"mfcvvs\": \"s\",\n  \"mfordS\": \"s\",\n  \"mfrpwt\": 82,\n  \"mfecus\": \"strin\",\n  \"mfccrd\": \"s\",\n  \"mfavsc\": \"s\",\n  \"mfzmsg\": \"string\",\n  \"mfamsg\": \"string\",\n  \"mfcmsg\": \"string\",\n  \"mfamxv\": \"s\",\n  \"mfryky\": \"st\",\n  \"mfadd1\": \"string\",\n  \"mfadd2\": \"string\",\n  \"mfamt1\": \"string\",\n  \"mfamt2\": \"string\",\n  \"mfcity\": \"string\",\n  \"mfstat\": \"string\",\n  \"mfdstz\": \"string\",\n  \"mfltxf\": \"string\",\n  \"mfmeth\": \"string\",\n  \"mfmrch\": \"string\",\n  \"mfname\": \"string\",\n  \"mfordr\": \"string\",\n  \"mfrefR\": \"string\",\n  \"mftyp2\": \"string\",\n  \"mftype\": \"string\",\n  \"mfzipc\": \"string\",\n  \"mpcusf\": \"string\",\n  \"mpcust\": \"string\",\n  \"mfcust\": \"string\",\n  \"mode\": \"string\"\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{baseUrl}}/rm/api/v1/plp/session",
-									"host": [
-										"{{baseUrl}}"
-									],
-									"path": [
-										"rm",
-										"api",
-										"v1",
-										"plp",
-										"session"
-									]
-								},
-								"description": "Initiate a Curbstone payment session."
-							},
-							"response": [
-								{
-									"id": "2353701-dd3801e1-0724-4cef-b888-209508ac4ce8",
-									"name": "Successful Response",
-									"originalRequest": {
-										"method": "POST",
-										"header": [
-											{
-												"key": "Accept",
-												"value": "application/json"
-											}
-										],
-										"body": {
-											"mode": "raw",
-											"raw": "{\n  \"plpUrl\": \"string\",\n  \"mptrgt\": \"string\",\n  \"mfzaut\": \"s\",\n  \"mfavs0\": \"s\",\n  \"mfcvv0\": \"s\",\n  \"mfarcv\": \"s\",\n  \"mfsarc\": \"s\",\n  \"mfavss\": \"s\",\n  \"mfcvvs\": \"s\",\n  \"mfordS\": \"s\",\n  \"mfrpwt\": 82,\n  \"mfecus\": \"strin\",\n  \"mfccrd\": \"s\",\n  \"mfavsc\": \"s\",\n  \"mfzmsg\": \"string\",\n  \"mfamsg\": \"string\",\n  \"mfcmsg\": \"string\",\n  \"mfamxv\": \"s\",\n  \"mfryky\": \"st\",\n  \"mfadd1\": \"string\",\n  \"mfadd2\": \"string\",\n  \"mfamt1\": \"string\",\n  \"mfamt2\": \"string\",\n  \"mfcity\": \"string\",\n  \"mfstat\": \"string\",\n  \"mfdstz\": \"string\",\n  \"mfltxf\": \"string\",\n  \"mfmeth\": \"string\",\n  \"mfmrch\": \"string\",\n  \"mfname\": \"string\",\n  \"mfordr\": \"string\",\n  \"mfrefR\": \"string\",\n  \"mftyp2\": \"string\",\n  \"mftype\": \"string\",\n  \"mfzipc\": \"string\",\n  \"mpcusf\": \"string\",\n  \"mpcust\": \"string\",\n  \"mfcust\": \"string\",\n  \"mode\": \"string\"\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": {
-											"raw": "{{baseUrl}}/rm/api/v1/plp/session",
-											"host": [
-												"{{baseUrl}}"
-											],
-											"path": [
-												"rm",
-												"api",
-												"v1",
-												"plp",
-												"session"
-											]
-										}
-									},
-									"status": "Created",
-									"code": 201,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "Content-Type",
-											"value": "application/json"
-										}
-									],
-									"cookie": [],
-									"responseTime": null,
-									"body": "{\n  \"mfsess\": \"string\"\n}"
-								},
-								{
-									"id": "2353701-072743c1-a0ff-4b69-b138-9c6dc027469a",
-									"name": "Conflict",
-									"originalRequest": {
-										"method": "POST",
-										"header": [
-											{
-												"key": "Accept",
-												"value": "application/json"
-											}
-										],
-										"body": {
-											"mode": "raw",
-											"raw": "{\n  \"plpUrl\": \"string\",\n  \"mptrgt\": \"string\",\n  \"mfzaut\": \"s\",\n  \"mfavs0\": \"s\",\n  \"mfcvv0\": \"s\",\n  \"mfarcv\": \"s\",\n  \"mfsarc\": \"s\",\n  \"mfavss\": \"s\",\n  \"mfcvvs\": \"s\",\n  \"mfordS\": \"s\",\n  \"mfrpwt\": 82,\n  \"mfecus\": \"strin\",\n  \"mfccrd\": \"s\",\n  \"mfavsc\": \"s\",\n  \"mfzmsg\": \"string\",\n  \"mfamsg\": \"string\",\n  \"mfcmsg\": \"string\",\n  \"mfamxv\": \"s\",\n  \"mfryky\": \"st\",\n  \"mfadd1\": \"string\",\n  \"mfadd2\": \"string\",\n  \"mfamt1\": \"string\",\n  \"mfamt2\": \"string\",\n  \"mfcity\": \"string\",\n  \"mfstat\": \"string\",\n  \"mfdstz\": \"string\",\n  \"mfltxf\": \"string\",\n  \"mfmeth\": \"string\",\n  \"mfmrch\": \"string\",\n  \"mfname\": \"string\",\n  \"mfordr\": \"string\",\n  \"mfrefR\": \"string\",\n  \"mftyp2\": \"string\",\n  \"mftype\": \"string\",\n  \"mfzipc\": \"string\",\n  \"mpcusf\": \"string\",\n  \"mpcust\": \"string\",\n  \"mfcust\": \"string\",\n  \"mode\": \"string\"\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": {
-											"raw": "{{baseUrl}}/rm/api/v1/plp/session",
-											"host": [
-												"{{baseUrl}}"
-											],
-											"path": [
-												"rm",
-												"api",
-												"v1",
-												"plp",
-												"session"
-											]
-										}
-									},
-									"status": "Conflict",
-									"code": 409,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "Content-Type",
-											"value": "application/json"
-										}
-									],
-									"cookie": [],
-									"responseTime": null,
-									"body": "{\n  \"errors\": {\n    \"ind\": true,\n    \"text\": \"string\",\n    \"reference\": \"string\"\n  }\n}"
-								},
-								{
-									"id": "2353701-52c2cdb6-e900-4a01-b50a-a3e178266384",
-									"name": "Validation Error",
-									"originalRequest": {
-										"method": "POST",
-										"header": [
-											{
-												"key": "Accept",
-												"value": "application/json"
-											}
-										],
-										"body": {
-											"mode": "raw",
-											"raw": "{\n  \"plpUrl\": \"string\",\n  \"mptrgt\": \"string\",\n  \"mfzaut\": \"s\",\n  \"mfavs0\": \"s\",\n  \"mfcvv0\": \"s\",\n  \"mfarcv\": \"s\",\n  \"mfsarc\": \"s\",\n  \"mfavss\": \"s\",\n  \"mfcvvs\": \"s\",\n  \"mfordS\": \"s\",\n  \"mfrpwt\": 82,\n  \"mfecus\": \"strin\",\n  \"mfccrd\": \"s\",\n  \"mfavsc\": \"s\",\n  \"mfzmsg\": \"string\",\n  \"mfamsg\": \"string\",\n  \"mfcmsg\": \"string\",\n  \"mfamxv\": \"s\",\n  \"mfryky\": \"st\",\n  \"mfadd1\": \"string\",\n  \"mfadd2\": \"string\",\n  \"mfamt1\": \"string\",\n  \"mfamt2\": \"string\",\n  \"mfcity\": \"string\",\n  \"mfstat\": \"string\",\n  \"mfdstz\": \"string\",\n  \"mfltxf\": \"string\",\n  \"mfmeth\": \"string\",\n  \"mfmrch\": \"string\",\n  \"mfname\": \"string\",\n  \"mfordr\": \"string\",\n  \"mfrefR\": \"string\",\n  \"mftyp2\": \"string\",\n  \"mftype\": \"string\",\n  \"mfzipc\": \"string\",\n  \"mpcusf\": \"string\",\n  \"mpcust\": \"string\",\n  \"mfcust\": \"string\",\n  \"mode\": \"string\"\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": {
-											"raw": "{{baseUrl}}/rm/api/v1/plp/session",
-											"host": [
-												"{{baseUrl}}"
-											],
-											"path": [
-												"rm",
-												"api",
-												"v1",
-												"plp",
-												"session"
-											]
-										}
-									},
-									"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
-									"code": 422,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "Content-Type",
-											"value": "application/json"
-										}
-									],
-									"cookie": [],
-									"responseTime": null,
-									"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"string\",\n        \"string\"\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"loc\": [\n        \"string\",\n        \"string\"\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    }\n  ]\n}"
-								}
-							]
-						},
-						{
-							"name": "Add Ar Lockbox",
-							"id": "2353701-af7666fe-cde2-4d17-b429-5de7870bfb47",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Accept",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n  \"invoices\": [\n    {\n      \"invoice\": 8192,\n      \"sequence\": 7160\n    },\n    {\n      \"invoice\": 4800,\n      \"sequence\": 9962\n    }\n  ],\n  \"payment\": {\n    \"companyCode\": \"st\",\n    \"customerNumber\": 5021,\n    \"paymentCode\": \"string\",\n    \"amount\": 2531.141541665811,\n    \"transactionId\": \"string\",\n    \"status\": \"string\",\n    \"transactionDate\": 9304,\n    \"applicationCode\": \"string\",\n    \"authorized\": \"string\",\n    \"agreement\": \"string\",\n    \"refId\": 7955\n  }\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{baseUrl}}/rm/api/v1/plp/ar-lockbox",
-									"host": [
-										"{{baseUrl}}"
-									],
-									"path": [
-										"rm",
-										"api",
-										"v1",
-										"plp",
-										"ar-lockbox"
-									]
-								},
-								"description": "Persist AR lockbox transaction details."
-							},
-							"response": [
-								{
-									"id": "2353701-bd36f922-cf91-43df-ac4f-374de19d8556",
-									"name": "Successful Response",
-									"originalRequest": {
-										"method": "POST",
-										"header": [
-											{
-												"key": "Accept",
-												"value": "application/json"
-											}
-										],
-										"body": {
-											"mode": "raw",
-											"raw": "{\n  \"invoices\": [\n    {\n      \"invoice\": 905,\n      \"sequence\": 1523\n    },\n    {\n      \"invoice\": 276,\n      \"sequence\": 5424\n    }\n  ],\n  \"payment\": {\n    \"companyCode\": \"st\",\n    \"customerNumber\": 8686,\n    \"paymentCode\": \"string\",\n    \"amount\": 3363.8986737937594,\n    \"transactionId\": \"string\",\n    \"status\": \"string\",\n    \"transactionDate\": 4150,\n    \"applicationCode\": \"string\",\n    \"authorized\": \"string\",\n    \"agreement\": \"string\",\n    \"refId\": 8385\n  }\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": {
-											"raw": "{{baseUrl}}/rm/api/v1/plp/ar-lockbox",
-											"host": [
-												"{{baseUrl}}"
-											],
-											"path": [
-												"rm",
-												"api",
-												"v1",
-												"plp",
-												"ar-lockbox"
-											]
-										}
-									},
-									"status": "OK",
-									"code": 200,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "Content-Type",
-											"value": "application/json"
-										}
-									],
-									"cookie": [],
-									"responseTime": null,
-									"body": "{\n  \"key_0\": \"string\",\n  \"key_1\": 8735\n}"
-								},
-								{
-									"id": "2353701-3c9d4256-4765-4cbd-af6d-3dfb387454f3",
-									"name": "Conflict",
-									"originalRequest": {
-										"method": "POST",
-										"header": [
-											{
-												"key": "Accept",
-												"value": "application/json"
-											}
-										],
-										"body": {
-											"mode": "raw",
-											"raw": "{\n  \"invoices\": [\n    {\n      \"invoice\": 905,\n      \"sequence\": 1523\n    },\n    {\n      \"invoice\": 276,\n      \"sequence\": 5424\n    }\n  ],\n  \"payment\": {\n    \"companyCode\": \"st\",\n    \"customerNumber\": 8686,\n    \"paymentCode\": \"string\",\n    \"amount\": 3363.8986737937594,\n    \"transactionId\": \"string\",\n    \"status\": \"string\",\n    \"transactionDate\": 4150,\n    \"applicationCode\": \"string\",\n    \"authorized\": \"string\",\n    \"agreement\": \"string\",\n    \"refId\": 8385\n  }\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": {
-											"raw": "{{baseUrl}}/rm/api/v1/plp/ar-lockbox",
-											"host": [
-												"{{baseUrl}}"
-											],
-											"path": [
-												"rm",
-												"api",
-												"v1",
-												"plp",
-												"ar-lockbox"
-											]
-										}
-									},
-									"status": "Conflict",
-									"code": 409,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "Content-Type",
-											"value": "application/json"
-										}
-									],
-									"cookie": [],
-									"responseTime": null,
-									"body": "{\n  \"errors\": {\n    \"ind\": true,\n    \"text\": \"string\",\n    \"reference\": \"string\"\n  }\n}"
-								},
-								{
-									"id": "2353701-440f7fa6-3056-4a87-adff-a4892c05f404",
-									"name": "Validation Error",
-									"originalRequest": {
-										"method": "POST",
-										"header": [
-											{
-												"key": "Accept",
-												"value": "application/json"
-											}
-										],
-										"body": {
-											"mode": "raw",
-											"raw": "{\n  \"invoices\": [\n    {\n      \"invoice\": 905,\n      \"sequence\": 1523\n    },\n    {\n      \"invoice\": 276,\n      \"sequence\": 5424\n    }\n  ],\n  \"payment\": {\n    \"companyCode\": \"st\",\n    \"customerNumber\": 8686,\n    \"paymentCode\": \"string\",\n    \"amount\": 3363.8986737937594,\n    \"transactionId\": \"string\",\n    \"status\": \"string\",\n    \"transactionDate\": 4150,\n    \"applicationCode\": \"string\",\n    \"authorized\": \"string\",\n    \"agreement\": \"string\",\n    \"refId\": 8385\n  }\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": {
-											"raw": "{{baseUrl}}/rm/api/v1/plp/ar-lockbox",
-											"host": [
-												"{{baseUrl}}"
-											],
-											"path": [
-												"rm",
-												"api",
-												"v1",
-												"plp",
-												"ar-lockbox"
-											]
-										}
-									},
-									"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
-									"code": 422,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "Content-Type",
-											"value": "application/json"
-										}
-									],
-									"cookie": [],
-									"responseTime": null,
-									"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"string\",\n        \"string\"\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"loc\": [\n        \"string\",\n        \"string\"\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    }\n  ]\n}"
-								}
-							]
-						}
-					],
-					"id": "2353701-95366f8b-8011-4f1f-aeee-39e0a4607874"
 				},
 				{
 					"name": "Authentication",
