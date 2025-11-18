@@ -14098,12 +14098,8 @@
 										"value": "application/json"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n  \"credentials\": {\n    \"username\": \"erozloznik@issiconsulting.com\",\n    \"password\": \"pakalolo\",\n    \"pathProfile\": \"{{hashedPathProfile}}\"\n  }\n}"
-								},
 								"url": {
-									"raw": "{{baseUrl}}/rm/api/v1/security/hash?text=edda",
+									"raw": "{{baseUrl}}/rm/api/v1/security/hash?text=pakalolo",
 									"host": [
 										"{{baseUrl}}"
 									],
@@ -14117,7 +14113,7 @@
 									"query": [
 										{
 											"key": "text",
-											"value": "edda"
+											"value": "pakalolo"
 										}
 									]
 								}
