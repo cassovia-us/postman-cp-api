@@ -14072,8 +14072,55 @@
 								"disableBodyPruning": true
 							},
 							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "X-API-KEY",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": "{{apiKey}}",
+											"type": "string"
+										}
+									]
+								},
 								"method": "GET",
-								"header": []
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"credentials\": {\n    \"username\": \"erozloznik@issiconsulting.com\",\n    \"password\": \"pakalolo\",\n    \"pathProfile\": \"{{hashedPathProfile}}\"\n  }\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/rm/api/v1/security/hash?text=edda",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"rm",
+										"api",
+										"v1",
+										"security",
+										"hash"
+									],
+									"query": [
+										{
+											"key": "text",
+											"value": "edda"
+										}
+									]
+								}
 							},
 							"response": []
 						}
