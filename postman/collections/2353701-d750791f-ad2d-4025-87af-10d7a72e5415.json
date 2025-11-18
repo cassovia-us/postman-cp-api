@@ -14064,6 +14064,18 @@
 									"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"string\",\n        \"string\"\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"loc\": [\n        \"string\",\n        \"string\"\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    }\n  ]\n}"
 								}
 							]
+						},
+						{
+							"name": "New Request",
+							"id": "2353701-20b33a8a-99be-41cb-822f-6fd1ecbb902e",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
 						}
 					],
 					"id": "2353701-5b356e2f-fded-4d7e-a52a-d00d7ba631f2"
