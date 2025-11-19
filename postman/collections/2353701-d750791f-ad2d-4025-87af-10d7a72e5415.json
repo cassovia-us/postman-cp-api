@@ -11851,6 +11851,21 @@
 												"disableBodyPruning": true
 											},
 											"request": {
+												"auth": {
+													"type": "apikey",
+													"apikey": [
+														{
+															"key": "key",
+															"value": "X-API-KEY",
+															"type": "string"
+														},
+														{
+															"key": "value",
+															"value": "{{apiKey}}",
+															"type": "string"
+														}
+													]
+												},
 												"method": "POST",
 												"header": [
 													{
@@ -11859,7 +11874,7 @@
 													}
 												],
 												"url": {
-													"raw": "{{baseUrl}}/rm/api/v1/security/user/password/reset?hashed_email=string&user_id=41200416752&new_password=stringst",
+													"raw": "{{baseUrl}}/rm/api/v1/security/user/password/reset?hashed_email=JXKBEJ1AIYJY6MS6M5MZ&user_id=999&new_password=pipik",
 													"host": [
 														"{{baseUrl}}"
 													],
@@ -11875,17 +11890,17 @@
 													"query": [
 														{
 															"key": "hashed_email",
-															"value": "string",
+															"value": "JXKBEJ1AIYJY6MS6M5MZ",
 															"description": "(Required) "
 														},
 														{
 															"key": "user_id",
-															"value": "41200416752",
+															"value": "999",
 															"description": "(Required) "
 														},
 														{
 															"key": "new_password",
-															"value": "stringst",
+															"value": "pipik",
 															"description": "(Required) "
 														}
 													]
