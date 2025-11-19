@@ -11612,6 +11612,21 @@
 												"disableBodyPruning": true
 											},
 											"request": {
+												"auth": {
+													"type": "apikey",
+													"apikey": [
+														{
+															"key": "key",
+															"value": "X-API-KEY",
+															"type": "string"
+														},
+														{
+															"key": "value",
+															"value": "{{apiKey}}",
+															"type": "string"
+														}
+													]
+												},
 												"method": "POST",
 												"header": [
 													{
@@ -11620,7 +11635,7 @@
 													}
 												],
 												"url": {
-													"raw": "{{baseUrl}}/rm/api/v1/security/user/password/request_reset?user_email=string",
+													"raw": "{{baseUrl}}/rm/api/v1/security/user/password/request_reset?user_email=erozloznik@issiconsulting.com",
 													"host": [
 														"{{baseUrl}}"
 													],
@@ -11636,7 +11651,7 @@
 													"query": [
 														{
 															"key": "user_email",
-															"value": "string",
+															"value": "erozloznik@issiconsulting.com",
 															"description": "(Required) "
 														}
 													]
