@@ -16177,6 +16177,21 @@
 										"disableBodyPruning": true
 									},
 									"request": {
+										"auth": {
+											"type": "apikey",
+											"apikey": [
+												{
+													"key": "key",
+													"value": "X-API-KEY",
+													"type": "string"
+												},
+												{
+													"key": "value",
+													"value": "{{apiKey}}",
+													"type": "string"
+												}
+											]
+										},
 										"method": "GET",
 										"header": [
 											{
