@@ -16463,6 +16463,21 @@
 												"disableBodyPruning": true
 											},
 											"request": {
+												"auth": {
+													"type": "apikey",
+													"apikey": [
+														{
+															"key": "key",
+															"value": "X-API-KEY",
+															"type": "string"
+														},
+														{
+															"key": "value",
+															"value": "{{apiKey}}",
+															"type": "string"
+														}
+													]
+												},
 												"method": "POST",
 												"header": [
 													{
@@ -16476,7 +16491,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"company\": \"st\",\n  \"pathProfile\": \"string\",\n  \"checks\": [\n    \"data-queue\"\n  ],\n  \"origin\": null,\n  \"dataQueueLibrary\": null,\n  \"dataQueueName\": null,\n  \"dataQueueWaitTime\": 577\n}",
+													"raw": "{\n  \"company\": \"SY\",\n  \"pathProfile\": \"SYCPAPIDEV\",\n  \"checks\": [\n    \"data-queue\"\n  ],\n  \"origin\": null,\n  \"dataQueueLibrary\": null,\n  \"dataQueueName\": null,\n  \"dataQueueWaitTime\": 577\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
