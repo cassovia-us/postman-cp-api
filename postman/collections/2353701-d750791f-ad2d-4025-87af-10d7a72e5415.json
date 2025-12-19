@@ -16949,6 +16949,168 @@
 					]
 				},
 				{
+					"name": "Login Copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "41c7946f-77dd-4fd3-976f-9bdf48e6c7cf",
+								"exec": [
+									"// Parse JSON body",
+									"var jsonData = JSON.parse(responseBody);",
+									"",
+									"// Check if the nested access_token exists",
+									"tests[\"Body contains access_token\"] = jsonData.accessToken && jsonData.accessToken.access_token;",
+									"",
+									"// Set environment variable to the nested access_token",
+									"if (jsonData.accessToken && jsonData.accessToken.access_token) {",
+									"    postman.setEnvironmentVariable(\"apiKey\", jsonData.accessToken.access_token);",
+									"}",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "2353701-249e5c15-3d77-4fe5-b949-012b8254bfc9",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"credentials\": {\n    \"username\": \"erozloznik@issiconsulting.com\",\n    \"password\": \"pakalolo\",\n    \"pathProfile\": \"{{hashedPathProfile}}\"\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/rm/api/v1/login-access/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"rm",
+								"api",
+								"v1",
+								"login-access",
+								""
+							]
+						},
+						"description": "TODO: Add some info about the endpoint"
+					},
+					"response": [
+						{
+							"id": "2353701-46cc01a8-ff1a-4310-a77b-7484a7522945",
+							"name": "Successful Response",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"credentials\": {\n    \"username\": \"\",\n    \"password\": \"\",\n    \"pathProfile\": \"\"\n  }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/rm/api/v1/login-access/",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"rm",
+										"api",
+										"v1",
+										"login-access",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n  \"userAuthorized\": true,\n  \"accessToken\": {\n    \"token_type\": \"Bearer\",\n    \"expires_in\": 36000,\n    \"access_token\": \"Some Token\",\n    \"scope\": \"Rentalman\"\n  },\n  \"authorizedMenus\": [\n    {\n      \"menuName\": \"string\",\n      \"menuOptions\": [\n        {\n          \"option\": 6375,\n          \"optionDefinition\": \"string\"\n        },\n        {\n          \"option\": 6733,\n          \"optionDefinition\": \"string\"\n        }\n      ]\n    },\n    {\n      \"menuName\": \"string\",\n      \"menuOptions\": [\n        {\n          \"option\": 3958,\n          \"optionDefinition\": \"string\"\n        },\n        {\n          \"option\": 4078,\n          \"optionDefinition\": \"string\"\n        }\n      ]\n    }\n  ],\n  \"userDetails\": {\n    \"firstName\": \"string\",\n    \"middleName\": \"string\",\n    \"lastName\": \"string\",\n    \"prefix\": \"string\",\n    \"suffix\": \"string\",\n    \"email\": \"string\",\n    \"customerNumber\": 7132,\n    \"customerName\": \"string\",\n    \"c3CustomerId\": \"string\",\n    \"c3MerchantId\": \"string\",\n    \"address1\": \"string\",\n    \"address2\": \"string\",\n    \"city\": \"string\",\n    \"state\": \"string\",\n    \"zipCode\": \"string\"\n  }\n}"
+						},
+						{
+							"id": "2353701-1943e51d-2981-4629-ae47-054f1e3ac068",
+							"name": "Validation Error",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"credentials\": {\n    \"username\": \"\",\n    \"password\": \"\",\n    \"pathProfile\": \"\"\n  }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/rm/api/v1/login-access/",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"rm",
+										"api",
+										"v1",
+										"login-access",
+										""
+									]
+								}
+							},
+							"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"string\",\n        \"string\"\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"loc\": [\n        \"string\",\n        \"string\"\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    }\n  ]\n}"
+						}
+					]
+				},
+				{
 					"name": "Generate Data Model",
 					"id": "2353701-8eef366f-dd33-410a-b9e1-36d4599af245",
 					"protocolProfileBehavior": {
