@@ -12792,6 +12792,21 @@
 												"disableBodyPruning": true
 											},
 											"request": {
+												"auth": {
+													"type": "apikey",
+													"apikey": [
+														{
+															"key": "key",
+															"value": "X-API-KEY",
+															"type": "string"
+														},
+														{
+															"key": "value",
+															"value": "{{apiKey}}",
+															"type": "string"
+														}
+													]
+												},
 												"method": "PUT",
 												"header": [
 													{
@@ -12805,7 +12820,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"menu_options\": [\n    5750,\n    5955\n  ]\n}",
+													"raw": "{\"menu_options\":[1,2,3,4,5,6,7,8,9,12,13,14,18,20,21,22,23,24,26,27,28,29,30,41,42,90]}",
 													"options": {
 														"raw": {
 															"language": "json"
@@ -12813,7 +12828,7 @@
 													}
 												},
 												"url": {
-													"raw": "{{baseUrl}}/rm/api/v1/security/user/authorized_options?user_email=string&menu=s",
+													"raw": "{{baseUrl}}/rm/api/v1/security/user/authorized_options?user_email=justin.winkler@outlook.com",
 													"host": [
 														"{{baseUrl}}"
 													],
@@ -12828,12 +12843,13 @@
 													"query": [
 														{
 															"key": "user_email",
-															"value": "string",
+															"value": "justin.winkler@outlook.com",
 															"description": "(Required) "
 														},
 														{
 															"key": "menu",
-															"value": "s"
+															"value": "s",
+															"disabled": true
 														}
 													]
 												}
