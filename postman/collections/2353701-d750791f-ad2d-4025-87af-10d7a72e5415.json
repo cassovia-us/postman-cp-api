@@ -16681,7 +16681,8 @@
 									"postman.setEnvironmentVariable(\"apiKey\", jsonData.access_token);"
 								],
 								"type": "text/javascript",
-								"packages": {}
+								"packages": {},
+								"requests": {}
 							}
 						}
 					],
@@ -16703,7 +16704,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"credentials\": {\n    \"username\": \"WG280ER\",\n    \"password\": \"3pakalolo\"\n  }\n}",
+							"raw": "{\n  \"credentials\": {\n    \"username\": \"WG280ER\",\n    \"password\": \"pakalolo62\"\n  }\n}",
 							"options": {
 								"raw": {
 									"language": "json"
