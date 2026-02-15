@@ -17798,7 +17798,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseUrl}}/rm/api/v1/widget-counts/?company_id=s&customer_number=2883903",
+							"raw": "{{baseUrl}}/rm/api/v1/widget-counts/?company_id=RM&customer_number=66",
 							"host": [
 								"{{baseUrl}}"
 							],
@@ -17812,12 +17812,12 @@
 							"query": [
 								{
 									"key": "company_id",
-									"value": "s",
+									"value": "RM",
 									"description": "(Required) "
 								},
 								{
 									"key": "customer_number",
-									"value": "2883903",
+									"value": "66",
 									"description": "(Required) "
 								}
 							]
